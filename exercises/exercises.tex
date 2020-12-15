@@ -8,19 +8,19 @@
 \subsection*{Know the Concepts}
 \begin{enumerate}
     \item Describe the fetch execute cycle.
-        \textbf{Answer:}
-    \item What is a register? How would computation be more difficult without a register?
-        \textbf{Answer:}
+	    \textbf{Answer:} The fetch execute cycle is the process of operations performed by the hardware to carry out an instruction. The CPU fetches the value pointed to by the program counter, then the instruction decoder coverts this value into both an instruction and the memory locations involved in the instruction. The relevant data is fetched from the corresponding memory locations through the data bus and placed into register(s), then the operation is executed by the arithmetic and logic unit and the result is placed in a register or the appropriate memory location.
+    \item What is a register? How would computation be more difficult without registers?
+        \textbf{Answer:} Registers are memory locations within the CPU distinguished from main memory and used for computation. Without registers, computation would have to be performed directly on data in main memory, which would be both cumbersome and slow.
     \item How do you represent numbers larger than 255?
-        \textbf{Answer:}
+        \textbf{Answer:} Numbers larger than 255 are represented by concatenating the values stored in multiple bytes.
     \item How big are the registers on the machines we will be using?
-        \textbf{Answer:}
+        \textbf{Answer:} On the machines we will be using, the registers will contain 4 bytes.
     \item How does a computer know how to interpret a given byte or set of bytes in memory.
-        \textbf{Answer:}
+        \textbf{Answer:} How a piece of memory should be interpreted is specified to the computer by individual instructions. An instruction may specify for the value at a given address to be added to another value (interpreted as data) or the program counter may point to a given address (interpreted as executable).
     \item What are the addressing modes and what are they used for?
-        \textbf{Answer:}
+        \textbf{Answer:} The various addressing modes are immediate mode, register addressing mode, direct addressing mode, indexed addressing mode, indirect addressing mode, and base pointer addressing mode. Each mode of is a different way of specifying the data to be used in an instruction, either by providing that data directly, providing the address to that data, etc.
     \item What does the instruction pointer do?
-        \textbf{Answer:}
+        \textbf{Answer:} The instruction pointer points to the location in memory that holds the next instruction for the processor to execute.
 \end{enumerate}
 
 \subsection*{Use the Concepts}
