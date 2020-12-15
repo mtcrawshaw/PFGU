@@ -26,29 +26,29 @@
 \subsection*{Use the Concepts}
 \begin{enumerate}
     \item What data would you use in an employee record? How would you lay it out in memory? \\
-        \textbf{Answer:}
+	    \textbf{Answer:} For example, our employee record could contain a name (50 bytes), an employee ID (1 byte), and a yearly salary (four bytes). If the record starts at memory location \texttt{start}, then the name is stored at location \texttt{start}, the ID is stored at location \texttt{start + 50}, and the salary is stored at location \texttt{start + 51}.
     \item If I had a pointer to the beginning of the employee record above, and wanted to access a particular piece of data inside of it, what addressing mode would I use? \\
-        \textbf{Answer:}
+        \textbf{Answer:} Since we have a pointer to the memory location we want to read from and an offset, we would use base pointer addressing mode.
     \item In base pointer addressing mode, if you have a register holding the value 3122, and an offset of 20, what address would you be trying to access? \\
-        \textbf{Answer:}
+        \textbf{Answer:} 3142.
     \item In indexed addressing mode, if the base address is 6512, the index register has a 5, and the multiplier is 4, what address would you be trying to access? \\
-        \textbf{Answer:}
+        \textbf{Answer:} 6532.
     \item In indexed addressing mode, if the base address is 123472, the index register has a 0, and the multiplier is 4, what address would you be trying to access? \\
-        \textbf{Answer:}
+        \textbf{Answer:} 123472.
     \item In indexed addressing mode, if the base address is 9123478, the index register has a 20, and the multiplier is 1, what address would you be trying to access? \\
-        \textbf{Answer:}
+        \textbf{Answer:} 9123498.
 \end{enumerate}
 
 \subsection*{Going Further}
 \begin{enumerate}
     \item What is the minimum number of addressing modes needed for computation? \\
-        \textbf{Answer:}
+	    \textbf{Answer:} Technically, we could use only a single addressing mode (indirect addressing mode) without losing the ability to perform any computations that we can with all addressing modes. This is because any other addressing mode can be simulated by indirect addressing mode; we just need to store the desired memory location in a register.
     \item Why include addressing modes that aren't strictly needed? \\
-        \textbf{Answer:}
+	    \textbf{Answer:} The addressing modes are all included for convenience. Sometimes we can save register space (when using immediate addressing), other times it is simply easier to have options besides only using pointers in registers.
     \item Research and then describe how pipelining (or one of the other complicating factors) affects the fetch-execute cycle. \\
-        \textbf{Answer:}
+	    \textbf{Answer:} Pipelining is a method for parallelizing the individual operations in the fetch-execute cycle to maximize utilization of CPU resources. Since the execution of a single instruction requires several steps (fetch instruction, decode instruction, execute instruction, etc), the first step of one instruction can be executed at the same time as the second step of another instruction. For example, suppose we have two instructions to execute with pipelining. On the first timestep, we would fetch the first instruction. On the second timestep, we would both decode the first instruction and fetch the second instruction. On the third step, we would execute the first instruction and decode the second instruction, and so on. This parallelization allows for better resource utilization and faster execution times.
     \item Research and then describe the tradeoffs between fixed-length instructions and variable-length instructions. \\
-        \textbf{Answer:}
+	    \textbf{Answer:} Fixed-length instructions (RISC for Reduced Instruction Set Computer) create consistent instruction lengths, which are easier to handle and execute than variable-length instructions. However, the complexity of a single instruction is inherently limited by its size, so a fixed-length instruction puts a cap on the complexity of each instruction. Some examples of RISC systems are ARM and SPARC. On the other hand, variable-length instructions (CISC) require more work to handle and execute, but they allow for more flexibility with longer instructions as well as space-saving for short instructions. Some examples of CISC systems are Intel and M68000.
 \end{enumerate}
 
 
