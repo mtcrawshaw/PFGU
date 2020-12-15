@@ -1,6 +1,15 @@
 \documentclass[12pt]{article}
 
+\usepackage{fullpage}
+\usepackage{parskip}
+
+\title{Programming From the Ground Up - Exercise Solutions}
+\author{Michael Crawshaw}
+\date{December 15, 2020}
+
 \begin{document}
+
+\maketitle
 
 
 \section*{Chapter 2 - Computer Architecture}
@@ -26,7 +35,7 @@
 \subsection*{Use the Concepts}
 \begin{enumerate}
     \item What data would you use in an employee record? How would you lay it out in memory? \\
-	    \textbf{Answer:} For example, our employee record could contain a name (50 bytes), an employee ID (1 byte), and a yearly salary (four bytes). If the record starts at memory location \texttt{start}, then the name is stored at location \texttt{start}, the ID is stored at location \texttt{start + 50}, and the salary is stored at location \texttt{start + 51}.
+	    \textbf{Answer:} For example, our employee record could contain a name (50 bytes), an employee ID (one byte), and a yearly salary (four bytes). If the record starts at memory location \texttt{start}, then the name is stored at location \texttt{start}, the ID is stored at location \texttt{start + 50}, and the salary is stored at location \texttt{start + 51}.
     \item If I had a pointer to the beginning of the employee record above, and wanted to access a particular piece of data inside of it, what addressing mode would I use? \\
         \textbf{Answer:} Since we have a pointer to the memory location we want to read from and an offset, we would use base pointer addressing mode.
     \item In base pointer addressing mode, if you have a register holding the value 3122, and an offset of 20, what address would you be trying to access? \\
@@ -48,7 +57,7 @@
     \item Research and then describe how pipelining (or one of the other complicating factors) affects the fetch-execute cycle. \\
 	    \textbf{Answer:} Pipelining is a method for parallelizing the individual operations in the fetch-execute cycle to maximize utilization of CPU resources. Since the execution of a single instruction requires several steps (fetch instruction, decode instruction, execute instruction, etc), the first step of one instruction can be executed at the same time as the second step of another instruction. For example, suppose we have two instructions to execute with pipelining. On the first timestep, we would fetch the first instruction. On the second timestep, we would both decode the first instruction and fetch the second instruction. On the third step, we would execute the first instruction and decode the second instruction, and so on. This parallelization allows for better resource utilization and faster execution times.
     \item Research and then describe the tradeoffs between fixed-length instructions and variable-length instructions. \\
-	    \textbf{Answer:} Fixed-length instructions (RISC for Reduced Instruction Set Computer) create consistent instruction lengths, which are easier to handle and execute than variable-length instructions. However, the complexity of a single instruction is inherently limited by its size, so a fixed-length instruction puts a cap on the complexity of each instruction. Some examples of RISC systems are ARM and SPARC. On the other hand, variable-length instructions (CISC) require more work to handle and execute, but they allow for more flexibility with longer instructions as well as space-saving for short instructions. Some examples of CISC systems are Intel and M68000.
+	    \textbf{Answer:} Fixed-length instructions (RISC for Reduced Instruction Set Computer) create consistent instruction lengths, which are easier to handle and execute than variable-length instructions. However, the complexity of a single instruction is inherently limited by its size, so a fixed-length instruction puts a cap on the complexity of each instruction. Some examples of RISC systems are ARM and SPARC. On the other hand, variable-length instructions (CISC for Complex Instuction Set Computer) require more work to handle and execute, but they allow for more flexibility with longer instructions as well as space-saving for short instructions. Some examples of CISC systems are Intel and M68000.
 \end{enumerate}
 
 
