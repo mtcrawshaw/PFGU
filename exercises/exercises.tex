@@ -7,47 +7,47 @@
 
 \subsection*{Know the Concepts}
 \begin{enumerate}
-    \item Describe the fetch execute cycle.
+    \item Describe the fetch execute cycle. \\
 	    \textbf{Answer:} The fetch execute cycle is the process of operations performed by the hardware to carry out an instruction. The CPU fetches the value pointed to by the program counter, then the instruction decoder coverts this value into both an instruction and the memory locations involved in the instruction. The relevant data is fetched from the corresponding memory locations through the data bus and placed into register(s), then the operation is executed by the arithmetic and logic unit and the result is placed in a register or the appropriate memory location.
-    \item What is a register? How would computation be more difficult without registers?
+    \item What is a register? How would computation be more difficult without registers? \\
         \textbf{Answer:} Registers are memory locations within the CPU distinguished from main memory and used for computation. Without registers, computation would have to be performed directly on data in main memory, which would be both cumbersome and slow.
-    \item How do you represent numbers larger than 255?
+    \item How do you represent numbers larger than 255? \\
         \textbf{Answer:} Numbers larger than 255 are represented by concatenating the values stored in multiple bytes.
-    \item How big are the registers on the machines we will be using?
+    \item How big are the registers on the machines we will be using? \\
         \textbf{Answer:} On the machines we will be using, the registers will contain 4 bytes.
-    \item How does a computer know how to interpret a given byte or set of bytes in memory.
+    \item How does a computer know how to interpret a given byte or set of bytes in memory. \\
         \textbf{Answer:} How a piece of memory should be interpreted is specified to the computer by individual instructions. An instruction may specify for the value at a given address to be added to another value (interpreted as data) or the program counter may point to a given address (interpreted as executable).
-    \item What are the addressing modes and what are they used for?
+    \item What are the addressing modes and what are they used for? \\
         \textbf{Answer:} The various addressing modes are immediate mode, register addressing mode, direct addressing mode, indexed addressing mode, indirect addressing mode, and base pointer addressing mode. Each mode of is a different way of specifying the data to be used in an instruction, either by providing that data directly, providing the address to that data, etc.
-    \item What does the instruction pointer do?
+    \item What does the instruction pointer do? \\
         \textbf{Answer:} The instruction pointer points to the location in memory that holds the next instruction for the processor to execute.
 \end{enumerate}
 
 \subsection*{Use the Concepts}
 \begin{enumerate}
-    \item What data would you use in an employee record? How would you lay it out in memory?
+    \item What data would you use in an employee record? How would you lay it out in memory? \\
         \textbf{Answer:}
-    \item If I had a pointer to the beginning of the employee record above, and wanted to access a particular ouece of data inside of it, what addressing mode would I use?
+    \item If I had a pointer to the beginning of the employee record above, and wanted to access a particular piece of data inside of it, what addressing mode would I use? \\
         \textbf{Answer:}
-    \item In base pointer addressing mode, if you have a register holding the value 3122, and an offset of 20, what address would you be trying to access?
+    \item In base pointer addressing mode, if you have a register holding the value 3122, and an offset of 20, what address would you be trying to access? \\
         \textbf{Answer:}
-    \item In indexed addressing mode, if the base address is 6512, the index register has a 5, and the multiplier is 4, what address would you be trying to access?
+    \item In indexed addressing mode, if the base address is 6512, the index register has a 5, and the multiplier is 4, what address would you be trying to access? \\
         \textbf{Answer:}
-    \item In indexed addressing mode, if the base address is 123472, the index register has a 0, and the multiplier is 4, what address would you be trying to access?
+    \item In indexed addressing mode, if the base address is 123472, the index register has a 0, and the multiplier is 4, what address would you be trying to access? \\
         \textbf{Answer:}
-    \item In indexed addressing mode, if the base address is 9123478, the index register has a 20, and the multiplier is 1, what address would you be trying to access?
+    \item In indexed addressing mode, if the base address is 9123478, the index register has a 20, and the multiplier is 1, what address would you be trying to access? \\
         \textbf{Answer:}
 \end{enumerate}
 
 \subsection*{Going Further}
 \begin{enumerate}
-    \item What is the minimum number of addressing modes needed for computation?
+    \item What is the minimum number of addressing modes needed for computation? \\
         \textbf{Answer:}
-    \item Why include addressing modes that aren't strictly needed?
+    \item Why include addressing modes that aren't strictly needed? \\
         \textbf{Answer:}
-    \item Research and then describe how pipelining (or one of the other complicating factors) affects the fetch-execute cycle.
+    \item Research and then describe how pipelining (or one of the other complicating factors) affects the fetch-execute cycle. \\
         \textbf{Answer:}
-    \item Research and then describe the tradeoffs between fixed-length instructions and variable-length instructions.
+    \item Research and then describe the tradeoffs between fixed-length instructions and variable-length instructions. \\
         \textbf{Answer:}
 \end{enumerate}
 
